@@ -1,0 +1,9 @@
+:root {
+  --border-color-default: #FFB74D;
+  --border-color-focus: #FFA726;
+  --background-color: #FFF3E0;
+  --text-color: #F57C00;
+  --placeholder-color: #FFAB91;
+  --box-shadow-color-default: rgba(255, 167, 38, 0.3);
+  --box-shadow-color-focus: rgba(255, 166, 38, 0.5);
+}

@@ -1,0 +1,33 @@
+.terrain {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.terrain__hill {
+  position: absolute;
+  width: 200%;
+  height: 200px;
+  background-color: #4a7642;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  left: -50%;
+}
+
+.terrain__flowers {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Убираем возможность взаимодействия с цветами */
+  overflow: hidden;
+}
+
+.terrain__flower {
+  position: absolute;
+  background-color: #ff69b4; /* Цветок будет розовым */
+  border-radius: 50%; /* Закругленные границы */
+  transition: transform 0.5s ease-in-out;
+}

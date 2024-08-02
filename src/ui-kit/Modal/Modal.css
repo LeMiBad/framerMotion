@@ -1,0 +1,77 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  border: 2px solid var(--border-color-default);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 5px 15px var(--box-shadow-color-default);
+  color: var(--text-color);
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content:focus-within {
+  border-color: var(--border-color-focus);
+  box-shadow: 0 5px 15px var(--box-shadow-color-focus);
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flyUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: darken(var(--text-color), 10%);
+}
+
+.modal-overlay.leave {
+  background: rgba(0, 0, 0, 0); /* делаем фон прозрачным при закрытии */
+  opacity: 0; /* добавляем плавное исчезновение */
+}
+
+.modal-content.leave {
+  animation: flyUp 0.3s ease-out forwards;
+}
